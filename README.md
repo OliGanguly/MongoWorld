@@ -26,3 +26,21 @@ rows     = documents(BSON)
 columns  = fields
 
 ![mongo](https://github.com/OliGanguly/MongoWorld/assets/82031303/b6742aea-8836-4482-a81c-c1a6bc10e1d3)
+
+
+## Connect in cmd
+ add C:\Program Files\MongoDB\Server\6.0\bin in env path
+
+```bash
+  open cmd
+  mongosh
+```
+    
+## What is MongoDB Compass?
+
+[Documentation](https://www.mongodb.com/docs/compass/current/?_ga=2.142888567.336937418.1692031645-255943059.1691768684)
+
+MongoDB Compass is a powerful GUI for querying, aggregating, and analyzing your MongoDB data in a visual environment.
+
+Compass is free to use and source available, and can be run on macOS, Windows, and Linux.
+
