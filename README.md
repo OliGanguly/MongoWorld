@@ -63,6 +63,23 @@ By default mongoDB creates an index on the _ id field in a collection.
 
 {db.collection_name.insertOne({key value pairs here})} inserts a document into the collection named 'collection_name'
 
+{
+db.collection_name.insertOne({
+name:"OLi",
+age:23,
+gpa:4.5,
+isFullTime:true,
+registrationDate:new Date("2023-01-02T00:00:00)
+graduationDate:null 
+stujects:["Java","javascript","python"],
+address:{
+street:"123 fake street",
+city:"brampton",
+zip:56666
+}
+})
+}
+
 {db.collection_name.insertMany([{key value pairs here}, {key value pairs here}, {key value pairs here}])} inserts many documents into the collection named 'collection_name'
 
 {db.collection_name.find()} lists all the documents of the collection named 'collection_name'
@@ -72,7 +89,9 @@ Ex -
 db.students.find().sort({name : 1}) sorts the documents in alphb. order
 db.students.find().sort({name : -1}) sorts the documents in reverse alphb. order
 
-{db.collection_name.find().limit(x)} limits the documents listed to a number x, i.e., total documents lisited will be x
+{db.collection_name.find().limit(x)} 
+Ex-db.students.find().limit(2)
+limits the documents listed to a number x, i.e., total documents lisited will be x
 
 {db.collection_name.find({query}, {projection})} 
 - {query} -> filters the documents wrt the query provided, query is just a document or a collection of key value pairs
