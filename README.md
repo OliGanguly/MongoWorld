@@ -25,3 +25,4 @@ rows     = documents(BSON)
 
 columns  = fields
 
+![mongo](https://github.com/OliGanguly/MongoWorld/assets/82031303/b6742aea-8836-4482-a81c-c1a6bc10e1d3)
