@@ -1,0 +1,33 @@
+1.Find all result in given collection
+ans: db.collectionName.find().pretty()
+
+2.Get filtered data from db
+d.collectionName.find({name:""}).pretty()
+
+3.Get only MongoDB data as a Output with only "field Name"
+db.collectionName.find({},{name:true}).pretty()
+without Id field
+db.collectionName.find({},{name:1,_id:0}).pretty()
+
+4.set the filter to isFullTime:true and get only the field with isFullTime:true value
+db.students.find({isFullTime:true}).limit(1)
+OR
+db.students.findOne({isFullTime:true})
+
+5.4.set the filter to isFullTime:true and get only the field with isFullTime:true value , get  the second element and ship first findOne
+db.students.find({isFullTime:true}).limit(1).skip(1)
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+db.students.updateOne({name:"Javascript"},{$set:{name:"Python"}})
+
+db.students.updateMany({name:"Javascript"},{$set:{name:"Python"}})
+----------------------------------------------------------------------
+
+db.collectionName.deleteMany({type:"FullStack"})
+
+
+
+
+
+

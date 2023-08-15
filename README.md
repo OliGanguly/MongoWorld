@@ -8,7 +8,7 @@ MongoDB is a document database designed for ease of application development and 
 ## Mongo vs mongod
 "mongo" is a command line shell that connects to a specific instance of mongod.
 
-"mongod" ->Mongo Daemon its basically the host process for the database, which performs all operations, its actuall adatabase.
+"mongod" ->Mongo Daemon its basically the host process for the database, which performs all operations, its actuall a database.
 
 ## SQL VS MONGODB
 Database -> Tables -> Records
@@ -19,11 +19,14 @@ SQL---------MONGO
 
 database = database
 
-table    = Collections
+table    =  Collections
 
-rows     = documents(BSON)
+rows     =  documents(BSON)
 
 columns  = fields
+
+SQL - uses SQL to query database
+NoSql - uses BSON to query database
 
 ![mongo](https://github.com/OliGanguly/MongoWorld/assets/82031303/b6742aea-8836-4482-a81c-c1a6bc10e1d3)
 
