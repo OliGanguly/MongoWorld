@@ -43,6 +43,7 @@ const Puppy = mongoose.model('Puppy', puppySchema);
 ```
 ## Build Connection
 ```bash
+npm init
 npm i mongoose
 ```
 
