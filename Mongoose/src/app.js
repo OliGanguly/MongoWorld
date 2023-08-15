@@ -32,28 +32,114 @@ const playListSchema = new mongoose.Schema({
 We need to call the model constructor on the 
 Mongoose instance and pass it the name 
 of the collection and a reference to the schema definition.
+
 */
 const playList = new mongoose.model('PlayList',playListSchema)
 
-// create and insert...
+
 const createDocument = async ()=>{
 try{
     const reactPlayList = new playList({
-        name:"React js",
-        ctype:"Frontend",
+        name:"spring Boot",
+        ctype:"Backend",
         videos:1,
         author:"oli",
         active:true,
         //default value
         date:"2023-01-23"
     })
-    //take some time and wait
+    
+    // me time and wait
      const result = await reactPlayList.save();   
 }catch(err){
     console.log(err)
 }
 }
-createDocument();
+// createDocument();
+
+const createDocuments= async ()=>{
+    try{
+        const springBootPlayList = new playList({
+            name:"spring Boot",
+            ctype:"Backend",
+            videos:1,
+            author:"oli",
+            active:true,
+            //default value
+            date:"2023-01-23"
+        })
+        const mongoPlayList = new playList({
+            name:"Mongo DB",
+            ctype:"Db",
+            videos:2,
+            author:"oli",
+            active:true,
+            //default value
+            date:"2023-01-23"
+        })
+        const Express = new playList({
+            name:"Express js",
+            ctype:"Backend",
+            videos:2,
+            author:"oli",
+            active:true,
+            //default value
+            date:"2023-01-23"
+        })
+        
+        // me time and wait
+         const result = await playList.insertMany([springBootPlayList,mongoPlayList,Express]);   
+
+
+    }catch(err){
+        console.log(err)
+    }
+    }
+    //create multiple doc
+    // createDocuments();
+// --------------------------------------------------------------------------------------------------------------
+    //Read data from mongoDB
+    const getDocument= async ()=>{
+        //select for only name
+     const result = await playList.find({ctype:"Backend"})
+     .select({name:true});
+     console.log(result)
+    }
+    // getDocument()
+
+// --------------------------------------------------------------------------------------------------------------------
+ 
+// Query operator - comparison const data = await playList.
+//   find({videos:2});
+//   find({videos:{$gt:1}});
+
+  const getDoc = async ()=>{
+  const data = await playList.
+//   find({videos:{$gt:1}});
+// $nin - not in
+     find({ctype:{$in : ["Backend","Fronend"]}})
+  console.log(data)
+  }
+//   getDoc();
+
+// -------------------------------------------------------------------------------------------------------------------------
+//  Logical Operator
+// 
+const getDocLogical = async ()=>{
+    const data = await playList.
+    //    find({ $or: [{ctype:"Backend"},{author:"oli"}]})
+       find({ $and: [{ctype:"Backend"},{author:"oli"}]})
+    console.log(data)
+    }
+    getDocLogical()
+// ------------------------------------------------------------------------------------------------------------------------------
+
+
+
+  
+
+
+
 
 
 
