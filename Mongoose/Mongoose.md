@@ -29,11 +29,6 @@ Fields, also known as properties or attributes, are similar to columns in a SQL 
 * Schema
 While Mongo is schema-less, SQL defines a schema via the table definition. A Mongoose schema is a document data structure (or shape of the document) that is enforced via the application layer.
 
-
-
-
-
-
 ```bash
 const puppySchema = new mongoose.Schema({
   name: {
