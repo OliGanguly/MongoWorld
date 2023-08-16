@@ -1,12 +1,12 @@
 {
   "dependencies": {
-    "mongoose": "^7.4.3"
+    "mongoose": "^7.4.3",
+    "validator": "^13.11.0"
   },
   "name": "mongoose",
   "description": "[Documentation](https://www.mongodb.com/docs/manual/?_ga=2.175368928.336937418.1692031645-255943059.1691768684)",
   "version": "1.0.0",
   "main": "index.js",
-  "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
